@@ -26,13 +26,13 @@ O pip é um modulo utilizado para instalar pacotes python. Exemplo de instalaç�
 ```
 python -m pip install ipython
 ```
-Para atualizaro o pip:
+Para atualizar o pip:
 ```
 python -m pip install --upgrade pip
 ```
 
 ## Código Python3 e boas práticas
-Para evitar conflitos com a versão do python rodando no sistema operacional é recomendado criar um ambiente virtual para instalar as dependências do código que será criado. O módulo site exibe os diretórios onde o python está instalado e o módulo venv cria o ambiente virtual adicionando esses diretórios nele. É considerado boa prática criar o ambiente virtual com o nome .venv
+Para evitar conflitos com a versão do python rodando no sistema operacional é recomendado criar um ambiente virtual para instalar as dependências do código que será criado. Os diretórios exibidos pelo módulo **site** são os diretórios onde o python está instalado. Para criar o ambiente virtual utilizamos o módulo **venv** que por sua vez adiciona os diretórios da instalação do python. É considerado boa prática criar o ambiente virtual com o nome **.venv** e incluído este arquivo no **.gitignore**.
 
 ```
 python3 -m venv .venv
