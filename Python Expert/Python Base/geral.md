@@ -21,8 +21,17 @@ Se o Python tiver sido instalado com suporte a este pacote ele abrirá uma inter
 ```
 python -m turtledemo
 ```
+### pip
+O pip é um modulo utilizado para instalar pacotes python. Exemplo de instalação com o pacote ipython
+```
+python -m pip install ipython
+```
+Para atualizaro o pip:
+```
+python -m pip install --upgrade pip
+```
 
-### Código Python3 e boas práticas
+## Código Python3 e boas práticas
 Para evitar conflitos com a versão do python rodando no sistema operacional é recomendado criar um ambiente virtual para instalar as dependências do código que será criado. O módulo site exibe os diretórios onde o python está instalado e o módulo venv cria o ambiente virtual adicionando esses diretórios nele. É considerado boa prática criar o ambiente virtual com o nome .venv
 
 ```
@@ -37,3 +46,6 @@ Não basta apenas criar o ambiente, é necessário realizar a ativação para ga
 source .venv/bin/activate
 ```
 Após o ambiente ser carregado tudo que for alterado ou adicionado no python afetará o python do ambiente virtual e não so sistema operacional
+
+## ipython
+Assim como o comando python, o ipython (se instaldo) abre um terminal, a diferença é que a aparência é melhor e tem mais opções
