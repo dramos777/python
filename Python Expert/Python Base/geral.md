@@ -21,4 +21,3 @@ Se o Python tiver sido instalado com suporte a este pacote ele abrirá uma inter
 ```
 python -m turtledemo
 ```
-00:28:18 - TempoVideoAula
