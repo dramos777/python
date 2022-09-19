@@ -45,7 +45,7 @@ Não basta apenas criar o ambiente, é necessário realizar a ativação para ga
 ``` 
 source .venv/bin/activate
 ```
-Após o ambiente ser carregado tudo que for alterado ou adicionado no python afetará o python do ambiente virtual e não so sistema operacional
+Após o ambiente ser carregado tudo que for alterado ou adicionado no python afetará o python do ambiente virtual e não o python instalado no sistema operacional
 
 ## ipython
 Assim como o comando python, o ipython (se instaldo) abre um terminal, a diferença é que a aparência é melhor e tem mais opções
