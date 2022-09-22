@@ -49,3 +49,22 @@ Após o ambiente ser carregado tudo que for alterado ou adicionado no python afe
 
 ## ipython
 Assim como o comando python, o ipython (se instaldo) abre um terminal, a diferença é que a aparência é melhor e tem mais opções
+
+# A importância dos tipos de dados
+Para fazer um bom código é necessário entender bem os tipos de dados
+
+- classe, categoria, tipo são uma coisa só em python, estão relacionadas. Hora ouvirá alguém chamar classe, hora categoria e hora tipo
+
+Os tipos de dados estão classificados em duas categorias:
+- Tipo de dados primário (Scalar Types)
+- Tipo de dados compostos
+
+### Tipo de dados primário (Scalar Types)
+Serve para representar um único valor. Ex: numero = 65
+
+Tipos (classes):
+- int
+```
+dir(int)
+```
+- 
