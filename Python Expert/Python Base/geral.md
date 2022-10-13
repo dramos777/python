@@ -59,12 +59,175 @@ Os tipos de dados estão classificados em duas categorias:
 - Tipo de dados primário (Scalar Types)
 - Tipo de dados compostos
 
-### Tipo de dados primário (Scalar Types)
-Serve para representar um único valor. Ex: numero = 65
+# Tipo de dados primário (Scalar Types)
+Representa um único valor. Ex: numero = 65
 
 Tipos (classes):
 - int
 ```
 dir(int)
 ```
-- 
+ 
+# Formatação de Textos
+O python é conhecido por ser uma linguagem dinâmica de tipagem forte, ou seja, ele precisa permitir que os tipos são compatíveis para executar, caso contrário exibe um erro na tela sem tentar resolver.
+
+Site para consulta de tipos de formatação: https://pyformat.info
+
+### Formatação - método concatenação
+Na concatenação o texto com as variáveis são imprressos direto na tela utilizando as ""
+```
+#VARIABLES
+nome = "João"
+saldo = 30.0
+
+#O exemplo abaixo exibe um erro pois não é possível concatenar string com float
+"O saldo do " + nome + " é total de " + saldo
+
+#Para garantir que os tipos sejam compatíveis é preciso fazer a conversão
+"O saldo do " + nome + " é total de " + str(saldo)
+```
+### Formatação - método interpolação (old style)
+Na interpolação nós criamos um template com o texto e os placeholders (marcações no texto)
+
+Exemplo 1
+```
+#VARIBALES
+nome = "João"
+saldo = 30.0
+
+#Template com placeholders declarados (%s string, %f float)
+template = "O saldo do %s é o total de %f"
+
+#EXECUTION
+template % (nome, saldo)
+```
+Exemplo 2
+```
+#Template (%s = string, %03d = 3 digitos, %.3f = 3 digitos float)
+msg = "Olá, %s você é o player n %03d e você tem %.3f pontos"
+
+#EXECUTION
+msg % ("João", 2, 987.3)
+```
+Exemplo 3
+```
+email_tmpl = """
+Olá, %(nome)s
+Tem interesse em comprar %(produto)s?
+Este produto é ótimo para resolver
+%(texto)s
+Clique agora em %(link)s
+Apenas %(quantidade)d disponíveis
+Preço promocional %(preco).2f
+"""
+
+clientes = ["Maria","João","Bruno"]
+for cliente in clientes:
+    print(
+        email_tmpl
+        % {
+            "nome": cliente,
+            "produto": "caneta",
+            "texto": "Escrever muito bem",
+            "link": "https://canetaslegais.com",
+            "quantidade": 1,
+            "preco": 50.5,
+           }
+         )
+```
+### Formatação - método str.format (new style)
+O método str.format permite a formatação do texto de diversas maneiras como: centralizado, alinhado à esquerda/direita.
+Exemplo 1
+```
+#Template
+msg = "Olá, {} você é o player n {} e você tem {} pontos"
+
+#EXECUTION
+msg.format("João", 2, 987.3)
+```
+Exemplo 2
+```
+#Template (:03d = 3 digitos, :.3f = 3 digitos float)
+msg = "Olá, {} você é o player n {:03d} e você tem {:.3f} pontos"
+
+#EXECUTION
+msg.format("João", 2, 987.3)
+```
+Exemplo 3
+```
+#Template (:03d = 3 digitos, :.3f = 3 digitos float)
+msg = "Olá, {nome} você é o player n {numero:03d} e você tem {pontos:.3f} pontos"
+
+#EXECUTION
+msg.format(nome="João", numero=2, pontos=987.3)
+
+#OBS.: utilizando tags não importa a ordem que for declarada na execução. Exemplo:
+msg.format(pontos=987.3, nome="João", numero=2)
+```
+Exemplo 4
+```
+#Formatado com o texto no centro com base de 20 caracteres
+"{:^20}".format("João")
+
+#Formatado com o texto à esquerda com base de 20 caracteres
+"{:<20}".format("João")
+
+#Formatado com o texto à direita com base de 20 caracteres
+"{:>20}".format("João")
+
+#Formatado com o texto no centro com base de 20 caracteres e preencher os espaços com "#"
+"{:#^20}".format("João")
+```
+### Formatação - método f-strings (new style)
+Implementado a partir do python 3. O método f-strings obrigatoriamente precisa ter uma string após o **f** e uma variável válida.
+syntax: f"string"{variavelDeclarada}
+
+Exemplo 1
+```
+#VARIABLES
+nome = "João"
+
+#EXECUTION
+f"Olá, {nome}"
+```
+Exemplo 2
+```
+#VARIABLES
+nome = "João"
+saldo = 90
+
+#EXECUTION
+f"Olá {nome} você tem {saldo} na conta"
+```
+Exemplo 3
+```
+#VARIABLES
+nome = "João"
+saldo = 90.3
+
+#EXECUTION
+f"Olá {nome} você tem {saldo:.2f} na conta"
+```
+### Casos de uso
+- concatenação (%s) - é ultil quando estiver utilizando a biblioteca **logging**
+
+- str.format {} - é indicado para mensagens longas
+
+- f-strings - utilizada para o restante (msg, print, erro, etc)
+
+# Tipo de dados composto
+Representa vários valores em um único objeto.
+
+### Tuple (tuplas) - type: sequence
+- Lida a partir da posição 0
+- Os dados são armazenados no mesmo objeto e é identificado associando  o ID e a posição de memória. Ex:
+
+|cores          |
+|---------------|
+|0              |
+|---------------|
+|1              |
+|---------------|
+|2              |
+|---------------|
+|type: sequence |
