@@ -220,7 +220,7 @@ Representa vários valores em um único objeto.
 
 ### Tuple (tuplas) - type: sequence
 - Lida a partir da posição 0
-- Os dados são armazenados no mesmo objeto e é identificado associando  o ID e a posição de memória. Ex:
+- Os dados são armazenados no mesmo objeto e é identificado associando  o ID e a posição de memória. Ex: **CORES = ("red", "green", "blue")**
 
 |CORES  |               |
 |-------|---------------|
