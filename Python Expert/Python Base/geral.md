@@ -222,13 +222,13 @@ Representa vários valores em um único objeto.
 - Lida a partir da posição 0
 - Os dados são armazenados no mesmo objeto e é identificado associando  o ID e a posição de memória. Ex:
 
-|cores  |               |
+|CORES  |               |
 |-------|---------------|
-|posicão| ID de memoria |
-|0      | ID(1)         |
-|-------|---------------|
-|1      | ID(2)         |
-|-------|---------------|
-|2      | ID(3)         |
-|-------|---------------|
+|posicão| ID de memória |
+|0      | (1)         |
+|-------|--------------------|
+|1      | (2)         |
+|-------|--------------------|
+|2      | (3)         |
+|-------|--------------------|
 |type:  |sequence       |
