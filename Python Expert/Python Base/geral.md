@@ -224,10 +224,10 @@ Representa vários valores em um único objeto.
 
 |cores          |
 |---------------|
-|0              |
+|0       ID(1)  |
 |---------------|
-|1              |
+|1       ID(2)  |
 |---------------|
-|2              |
+|2       ID(3)  |
 |---------------|
 |type: sequence |
