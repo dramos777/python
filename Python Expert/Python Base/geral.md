@@ -232,3 +232,87 @@ Representa vários valores em um único objeto.
 |2      | (3)         |
 |-------|--------------------|
 |type:  |sequence       |
+```
+#Declaração da variável
+In [0]: dados = "João", 15, True, None, 45.3
+
+#Quantas vezes tem a palavra João?
+In [1]: dados.count("João")
+Out[1]: 1
+
+#Verificar dados de trás para frente
+In [2]: dados[-1]
+Out[2]: 45.3
+```
+- As tuplas podem ser interadas
+```
+In [3]: for i in dados:
+            print("--> ", i)
+Out[3]:
+--> João
+--> 15
+--> True
+--> None
+--> 45.3
+```
+- A tupla é imutável, ou seja, não dá pra mudar o valor de um intem individual já declarado. Para alterar a variável terá que ser declarada novamente
+
+- Por convenção quando falamos de coordenadas o x vem antes do y no plano cartesiano
+```
+#Declarando x e y
+In [0]: coordenadas = (2,1)
+
+#Print na variável
+In [1]: print(coordenadas)
+Out[1]: (2,1)
+
+#Para tirar cada elemento de dentro da tupla
+In [2]: print(coordenadas[0], coordenadas[1])
+Out [2]: 2 1
+```
+- Desempacotamento de tuplas. É comum, ao usarmos funções, realizar o desempacotamento de uma tupla para ficar mais clara o entendimento dos dados. A tupla vai permanecer lá, mas os dados serão atribuídos a outras variáveis. Ex:
+```
+#Declaração da tupla
+In [0]: pontos = (2, 1, 99)
+
+#Desempacotamento da posição 0 para a variável x
+In [1]: x = pontos[0]
+
+#Desempacotamento da posição 1 para a variável y
+In [2]: y = pontos[1]
+
+#Desempacotamento da posição 2 para a variável z
+In [3]: z = pontos[2]
+
+#Desempacotamento de toda a tupla de uma só vez
+In [4]: x, y, z = pontos
+
+#Desempacotando apenas a primeira posição e descartando os demais
+In [5]: x, *_ = pontos
+
+#Desempacotando apenas a ultima posição e descartando os demais
+In [6]: *_, z = pontos
+
+#Desempacotando utilizando convenções padronizadas
+In [7]: head, *body, tail = pontos
+```
+### Listas (list)
+Dados compostos do tipo list "podem ser comparados" ao array de outras linguagens de programação
+```
+#Duas formas para criar a lista. Uma é utilizando apenas [] e a outra é utilizando list(). Dê preferência ao []
+users = []
+users = list()
+
+#Para incluir um elemento no final da lista users
+users.append("João")
+
+#Adicionar um elemento na lista users em uma posição expecífica
+users.insert(0, "Maria")
+users.insert(2, "Carla")
+
+#Remover um elemento da lista users
+users.remove("Maria")
+
+#Concatenar duas listas distintas
+users.extend(outra_lista)
+
